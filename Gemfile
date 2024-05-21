@@ -65,3 +65,10 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "devise", "~> 4.9"
+
+gem 'sass-rails' 
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'font_awesome5_rails'
