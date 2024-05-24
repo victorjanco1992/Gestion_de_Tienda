@@ -8,10 +8,10 @@ class CategoriesController < ApplicationController
   def new
     @categoria = Category.new
   end
-  
+
   def edit
   end
-  
+
   def create
     @categoria = Category.new(category_params)
 
