@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_06_231219) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_19_152306) do
   create_table "categories", force: :cascade do |t|
     t.string "nombre"
     t.string "descripcion"
@@ -38,6 +38,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_06_231219) do
     t.datetime "updated_at", null: false
     t.index ["categories_id"], name: "index_products_on_categories_id"
     t.index ["suppliers_id"], name: "index_products_on_suppliers_id"
+  end
+
+  create_table "sale_details", force: :cascade do |t|
+    t.integer "cantidad"
+    t.integer "product_id", null: false
+    t.integer "sale_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_sale_details_on_product_id"
+    t.index ["sale_id"], name: "index_sale_details_on_sale_id"
   end
 
   create_table "sales", force: :cascade do |t|
@@ -81,6 +91,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_06_231219) do
 
   add_foreign_key "products", "categories", column: "categories_id"
   add_foreign_key "products", "suppliers", column: "suppliers_id"
+  add_foreign_key "sale_details", "products"
+  add_foreign_key "sale_details", "sales"
   add_foreign_key "warehouse_records", "products"
   add_foreign_key "warehouse_records", "suppliers"
 end
