@@ -1,6 +1,8 @@
 # Gestion_de_Tienda
 
-Proyecto usando Ruby, con el framework ruby on rails
+Proyecto "sistemas administrativo de tienda"
+
+Con lenguaje Ruby y su framework ruby on rails
 
 Grupo 17
 
