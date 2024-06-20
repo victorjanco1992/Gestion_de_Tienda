@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
 
   def new
     @categoria = Category.new
-    #render plain: "This is a plain text response"
+
   end
 
   def edit
@@ -41,6 +41,7 @@ class CategoriesController < ApplicationController
 
   def destroy
     @categoria.destroy
+    
     respond_to do |format|
       format.json { head :no_content }
       format.js
@@ -57,3 +58,4 @@ class CategoriesController < ApplicationController
     end
 
 end
+

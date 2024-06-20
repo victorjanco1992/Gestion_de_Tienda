@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   get 'buscador_productos/:termino', to: 'productos#buscador'
 
+
 end

@@ -4,6 +4,9 @@ import "controllers"
 import 'jquery'
 import "jquery_ujs"
 
+window.jQuery = jQuery;
+window.$ = jQuery;
+
 //=requiere jquery
 //=require jquery_ujs
 //=requiere popper
